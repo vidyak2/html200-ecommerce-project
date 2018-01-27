@@ -1,61 +1,153 @@
-body {
-  font-size: 100%;
-  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-p {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: lighter;
-  color: #2d2d2d;
-}
+  body {
+    font-size: 100%;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  }
 
-/* TODO: size images manually so this is not necessary */
-img {
-  max-height: 20rem;
-}
+  .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 
-/***************** NAV *****************/
+  .clear {
+    clear: both;
+  }
 
-nav a:hover {
-  text-decoration: underline;
-}
+  /***************** NAV *****************/
 
-/**************** HERO *****************/
+  nav {
+    float: right;
+    width: 8%;
+    padding: 2rem;
+  }
 
-header img {
-  max-height: 6rem;
-}
+  nav a {
+    float: right;
+    padding: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
-h1 .logo-w {
-  font-size: 3.5rem;
-}
+  /**************** HERO *****************/
 
-/**************** ASIDE ****************/
+  header img {
+    float: left;
+    max-height: 6rem;
+    margin: 2rem;
+    width: auto;
+  }
 
-input[type="submit"] {
-  padding: .25rem;
-  background-color: #3D7FCF;
-  border: 1px solid #3D7FCF;
-  border-radius: 5px;
-  font-size: .75rem;
-  color: white;
-}
+  h1 .logo-w {
+    float: left;
+    padding: 3rem 0.5rem 3rem 0.5rem;
+    font-size: 3.5rem;
+    /*  font-family: 'Marck Script', cursive;*/
+    font-family: 'Lobster Two', cursive;
+  }
 
-/*********** PRODUCTS SECTION ***********/
+  /*********** PRODUCTS SECTION ***********/
 
-section {
-  padding: 0 .75rem;
-}
+  section {
+    padding: 0 .75rem;
+  }
 
-h2 {
-  padding-top: 1.5rem;
-  font-size: 2rem;
-  text-align: center;
-  color: #2d2d2d;
-}
+  h2 {
+    clear: both;
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2d2d2d;
+    font-family: 'Merienda One', cursive;
+  }
 
-h3 {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #2d2d2d;
-}
+  h3 {
+    float: left;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #2d2d2d;
+  }
+
+  /*  Grid of 6 */
+
+  .span_6_of_6 {
+    width: 97%;
+  }
+
+  .span_5_of_6 {
+    width: 81.16%;
+  }
+
+  .span_4_of_6 {
+    width: 64.33%;
+  }
+
+  .span_3_of_6 {
+    width: 47.5%;
+  }
+
+  .span_2_of_6 {
+    width: 30.66%;
+  }
+
+  .span_1_of_6 {
+    width: 13.83%;
+  }
+
+  /*********** MODULES ***********/
+
+  /*
+  section.item-container {
+    flex-direction: column;
+    padding: 2em;
+  }
+*/
+
+  .span_2_of_6 {
+    float: left;
+  }
+
+  /* TODO: size images manually so this is not necessary */
+
+  img.scarf {
+    max-height: 20rem;
+    max-width: 10rem;
+    display: block;
+  }
+
+
+  p {
+    clear: both;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #2d2d2d;
+  }
+
+
+  /**************** ASIDE ****************/
+
+  aside {
+    clear: both;
+    padding: 2em;
+  }
+
+  input {
+    padding: .25rem;
+    margin: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  input[type="submit"] {
+    padding: .25rem;
+    background-color: #3D7FCF;
+    border: 1px solid #3D7FCF;
+    border-radius: 5px;
+    font-size: .75rem;
+    color: white;
+  }

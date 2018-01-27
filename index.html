@@ -7,13 +7,14 @@
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Marck+Script|Merienda+One|Rancho" rel="stylesheet">
 
   <!-- TODO: insert your personal Font Awesome CDN link here -->
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="main-nav">
       <ul>
         <li><a href="#">Hats</a></li>
         <li><a href="#">Gloves</a></li>
@@ -26,48 +27,42 @@
 
     <img src="images/logo-scarfcat.png" alt="dapper cartoon cat wearing a scarf">
     <h1>
-      <span class="logo-w">W</span>inter
-      <span class="logo-w">W</span>ear
-      <span class="logo-w">W</span>arehouse
+      <span class="logo-w">Winter</span>
+      <span class="logo-w">Wear</span>
+      <span class="logo-w">Warehouse</span>
     </h1>
   </header>
 
-  <main>
-    <aside>
-      <form>
-        <label>Sign up for our mailing list:
-          <input type="email" name="email">
-        </label>
 
-        <input type="submit" value="Submit">
-      </form>
-    </aside>
+  <main>
 
     <section>
       <h2>Scarves</h2>
 
-      <div class="item-container">
-        <div>
+      <section class="item-container">
+        <div class="span_2_of_6 ">
           <h3>Reversible Plaid</h3>
-          <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
+          <img class="scarf" src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
           <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
           <p>26.99</p>
         </div>
 
-        <div>
+
+        <div class="span_2_of_6 ">
           <h3>Fringed Plaid</h3>
-          <img src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
+          <img class="scarf" src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
           <p>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</p>
           <p>18.99</p>
         </div>
 
-        <div>
+        <div class="span_2_of_6 ">
           <h3>Multi Color</h3>
-          <img src="images/multi-color.jpeg" alt="multi color scarf">
+          <img class="scarf" src="images/multi-color.jpeg" alt="multi color scarf">
           <p>The Who What Where Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</p>
           <p>22.99</p>
         </div>
 
+        <!--
         <div>
           <h3>Northern Lights</h3>
           <img src="images/northern-lights.jpg" alt="northern lights scarf">
@@ -102,10 +97,24 @@
           <p>Luxurious silk scarf with subtle paisley pattern. 100% silk.</p>
           <p>26.99</p>
         </div>
+-->
 
-      </div>
+
+      </section>
+
+      <aside>
+        <form>
+          <label>Sign up for our mailing list:
+          <input type="email" name="email">
+        </label>
+
+          <input type="submit" value="Submit">
+        </form>
+      </aside>
     </section>
+
   </main>
+
   <script src="js/script.js"></script>
 </body>
 </html>
