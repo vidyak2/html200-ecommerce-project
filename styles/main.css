@@ -9,16 +9,6 @@
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
   }
 
-  .clearfix:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  .clear {
-    clear: both;
-  }
-
   /***************** NAV *****************/
 
   header {
@@ -30,21 +20,6 @@
     width: 10%;
     padding: 2rem;
   }
-
-  /*
-
-  @media all and (max-width:800px) {
-    nav {
-      justify-content: space-around;
-    }
-  }
-
-  @media all and (max-width: 500px) {
-    nav {
-      flex-direction: column;
-    }
-  }
-*/
 
   nav a {
     color: black;
@@ -71,8 +46,10 @@
 
   .container {
     display: inline-flex;
-    /*    align-content: space-around;*/
-    /*    justify-content: center;*/
+    /*
+    align-content: space-around;
+    justify-content: center; 
+*/
   }
 
   /*********** PRODUCTS SECTION ***********/
@@ -82,7 +59,6 @@
   }
 
   h2 {
-    clear: both;
     padding-top: 1.5rem;
     font-size: 2.5rem;
     text-align: center;
@@ -90,92 +66,79 @@
     font-family: 'Merienda One', cursive;
   }
 
-  h3 {
-    flex-basis: auto;
-    flex-grow: 1;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    color: #2d2d2d;
-  }
-
-  /*  Grid of 6 */
-
-  .span_6_of_6 {
-    width: 97%;
-  }
-
-  .span_5_of_6 {
-    width: 81.16%;
-  }
-
-  .span_4_of_6 {
-    width: 64.33%;
-  }
-
-  .span_3_of_6 {
-    width: 47.5%;
-  }
-
-  .span_2_of_6 {
-    width: 30.66%;
-  }
-
-  .span_1_of_6 {
-    width: 13.83%;
-  }
-
   /*********** MODULES ***********/
 
-  /*Use display: flex and flex-wrap: wrap to keep article in the width chosen (90%) and be responsive. This eliminates the use of float left.*/
+  /*Use display: flex and flex-wrap: wrap to keep article in the width chosen (90%) and go to the next row when there isn't enough space. This eliminates the use of float left.*/
 
-  article {
+  article.products {
     margin: 2rem;
     display: flex;
     flex-wrap: wrap;
   }
 
   div {
-    padding: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
+    background-color: darkgray;
+    width: 100%;
   }
+
+  /*We want 3 items per row and the rest goes to the next row. So, width = 100%/3 = 33.33% for each product. We have to set flex-basis to 33.33%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 33.33%: 29.33% each.*/
+
+  .first {
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 29.33%;
+    display: flex;
+  }
+
+
+  /*We want 2 items in this row, so we add flex-grow: 0, so it doesn't extend to the whole space.*/
+
+  .second {
+    padding: 2%;
+    flex-grow: 0;
+    flex-basis: 33.33%;
+    display: flex;
+  }
+
 
   /* TODO: size images manually so this is not necessary */
 
+  h3 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2d2d2d;
+  }
+
   img.scarf {
-    max-height: auto;
     max-width: 50%;
-    margin: auto;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .itemone {
-    align-self: center;
-  }
+  p.text {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
 
-  .itemtwo {
-    align-self: end;
-  }
-
-
-
-  p {
-    clear: both;
-    flex-grow: 1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     color: #2d2d2d;
     text-align: justify;
-  }
-
-  .price {
-    text-align: center;
-    font-weight: 600;
     flex-grow: 1;
   }
+
+  h4 {
+    text-align: center;
+    flex-grow: 1;
+  }
+
 
   /**************** ASIDE ****************/
 
