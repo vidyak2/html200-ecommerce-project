@@ -21,15 +21,32 @@
 
   /***************** NAV *****************/
 
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   nav {
-    float: right;
-    width: 8%;
+    width: 10%;
     padding: 2rem;
   }
 
+  /*
+
+  @media all and (max-width:800px) {
+    nav {
+      justify-content: space-around;
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    nav {
+      flex-direction: column;
+    }
+  }
+*/
+
   nav a {
-    float: right;
-    padding: 0.5rem;
     color: black;
     font-weight: bold;
     text-decoration: underline;
@@ -52,10 +69,16 @@
     font-family: 'Lobster Two', cursive;
   }
 
+  .container {
+    display: inline-flex;
+    /*    align-content: space-around;*/
+    /*    justify-content: center;*/
+  }
+
   /*********** PRODUCTS SECTION ***********/
 
   section {
-    padding: 0 .75rem;
+    margin: auto;
   }
 
   h2 {
@@ -68,8 +91,10 @@
   }
 
   h3 {
-    float: left;
+    flex-basis: auto;
+    flex-grow: 1;
     font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
     color: #2d2d2d;
   }
@@ -102,33 +127,55 @@
 
   /*********** MODULES ***********/
 
-  /*
-  section.item-container {
-    flex-direction: column;
-    padding: 2em;
-  }
-*/
+  /*Use display: flex and flex-wrap: wrap to keep article in the width chosen (90%) and be responsive. This eliminates the use of float left.*/
 
-  .span_2_of_6 {
-    float: left;
+  article {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* TODO: size images manually so this is not necessary */
 
   img.scarf {
-    max-height: 20rem;
-    max-width: 10rem;
-    display: block;
+    max-height: auto;
+    max-width: 50%;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  .itemone {
+    align-self: center;
+  }
+
+  .itemtwo {
+    align-self: end;
+  }
+
 
 
   p {
     clear: both;
+    flex-grow: 1;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     color: #2d2d2d;
+    text-align: justify;
   }
 
+  .price {
+    text-align: center;
+    font-weight: 600;
+    flex-grow: 1;
+  }
 
   /**************** ASIDE ****************/
 
