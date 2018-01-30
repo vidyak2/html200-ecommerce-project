@@ -19,6 +19,17 @@
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
   }
 
+  @media(max-width: 320px) {
+    .mainnav {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      padding: 2rem 0.5rem 0.5rem 0.5rem;
+      box-shadow: 0rem 0rem 0rem 0rem;
+    }
+  }
+
+
   /*Flex parent element and keep content in equal space along the whoe width*/
 
   ul {
@@ -88,7 +99,6 @@
   .rightnav {
     justify-content: flex-end;
     flex-wrap: wrap;
-    width: auto;
     margin: 4rem 0rem 0rem 0rem;
     margin-left: auto;
     margin-right: 2rem;
@@ -103,10 +113,20 @@
       flex-grow: 1;
       align-content: center;
       margin: 0rem 0rem 0rem 0rem;
-      padding: 1rem 1rem 1rem rem;
+      padding: 1rem;
       box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
     }
   }
+
+  @media(max-width: 320px) {
+    .rightnav {
+      flex-wrap: wrap;
+
+      padding: 0.5rem;
+      box-shadow: 0rem 0rem 0rem 0rem;
+    }
+  }
+
 
   /*********** PRODUCTS SECTION ***********/
 
@@ -206,7 +226,7 @@
     margin-right: auto;
   }
 
-  p.text {
+  .text {
     margin-top: auto;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -220,6 +240,11 @@
   }
 
   h4 {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .rating {
     text-align: center;
     flex-grow: 1;
   }
@@ -289,4 +314,56 @@
     border-radius: 6px;
     font-size: 1rem;
     color: black;
+  }
+
+  /* Center mailing list info when there isn't enough space to display the whole line */
+
+  @media(max-width: 540px) {
+    input {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /**************** FOOTER ****************/
+
+  footer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    background: #d9d9d9;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+  }
+
+  article.footer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  p.footer {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    text-align: center;
+    font-weight: lighter;
+    color: #2d2d2d;
+    flex-grow: 1;
+  }
+
+  a.footer {
+    padding: 0.5rem;
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  /* At the same time that the products change to 2 per row, the Back to Top button comes to the center bottom of the page */
+
+  @media(max-width: 750px) {
+    a.footer {
+      display: inline-flex;
+      justify-content: center;
+    }
   }
