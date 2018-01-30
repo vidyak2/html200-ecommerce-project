@@ -10,34 +10,57 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Marck+Script|Merienda+One|Rancho" rel="stylesheet">
 
   <!-- TODO: insert your personal Font Awesome CDN link here -->
+  <script src="https://use.fontawesome.com/d3b7bc5f60.js"></script>
+
 </head>
 
 <body>
   <header>
-    <nav class="main-nav">
+    <!--Logo, store name and right side nav on the same line-->
+    <div class="topheader">
+      <img class="logo" src="images/logo-scarfcat.png" alt="dapper cartoon cat wearing a scarf">
+      <h1 class="logo-w">Winter Wear Warehouse</h1>
+      <nav class="rightnav">
+        <ul>
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li class="cart-info">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Main nav on the line below-->
+    <nav class="mainnav">
       <ul>
+        <li><a href="#">Jackets</a></li>
+        <li><a href="#">Sweaters</a></li>
+        <li><a href="#">Boots</a></li>
         <li><a href="#">Hats</a></li>
         <li><a href="#">Gloves</a></li>
         <li><a href="#">Scarves</a></li>
-        <li class="cart-info">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </li>
+        <li><a href="#">Sale</a></li>
       </ul>
     </nav>
-
-    <img src="images/logo-scarfcat.png" alt="dapper cartoon cat wearing a scarf">
-    <h1>
-      <span class="logo-w">Winter</span>
-      <span class="logo-w">Wear</span>
-      <span class="logo-w">Warehouse</span>
-    </h1>
   </header>
 
 
   <main>
 
     <section class="container">
-      <!--    <h2>Scarves</h2>-->
+      <h2>Scarves</h2>
+
+      <form method="GET">
+        <label>Sort by:
+                <select name="sort">
+                  <option value="" selected>Relevance</option>
+                  <option value="increasing">Price: Low to High</option>
+                  <option value="decreasing">Price: High to Low</option>
+                  <option value="rating">Ratings</option>
+                </select>
+            </label>
+      </form>
 
       <article class="products">
         <div class="first">
@@ -97,22 +120,19 @@
           <p class="text">Luxurious silk scarf with subtle paisley pattern. 100% silk.</p>
           <h4>26.99</h4>
         </div>
-
-
-
       </article>
 
-      <!--
+
       <aside>
         <form>
-          <label>Sign up for our mailing list:
-          <input type="email" name="email">
+          <label class="mail">Sign up for our mailing list:
+          <input type="email" name="email" placeholder="someone@example.com">
         </label>
 
           <input type="submit" value="Submit">
         </form>
       </aside>
--->
+
     </section>
 
   </main>
