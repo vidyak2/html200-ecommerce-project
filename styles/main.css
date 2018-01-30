@@ -131,10 +131,27 @@
     font-family: 'Merienda One', cursive;
   }
 
+  @media(max-width: 470px) {
+    h2 {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   form {
     justify-content: flex-end;
     margin-left: auto;
     margin-right: 2rem;
+    padding-top: 1rem;
+  }
+
+  @media(max-width: 470px) {
+    form {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   /*********** MODULES ***********/
@@ -226,8 +243,6 @@
       display: flex;
     }
   }
-
-
 
   /*We want 1 items per row and the rest goes to the next row. So, width = 100%/1 = 100% for each product. We have to set flex-basis to 100%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 100%: 96% each.*/
 
