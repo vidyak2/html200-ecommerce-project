@@ -19,7 +19,7 @@
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
   }
 
-  @media(max-width: 320px) {
+  @media screen and (max-width: 320px) {
     .mainnav {
       flex-wrap: wrap;
       flex-direction: column;
@@ -28,7 +28,6 @@
       box-shadow: 0rem 0rem 0rem 0rem;
     }
   }
-
 
   /*Flex parent element and keep content in equal space along the whoe width*/
 
@@ -78,7 +77,7 @@
     font-family: 'Lobster Two', cursive;
   }
 
-  @media(max-width: 960px) {
+  @media screen and (max-width: 960px) {
     .logo-w {
       flex-grow: 1;
       flex-basis: 80%;
@@ -86,7 +85,7 @@
     }
   }
 
-  @media(max-width: 560px) {
+  @media screen and (max-width: 560px) {
     .logo-w {
       flex-grow: 1;
       flex-basis: 50%;
@@ -108,7 +107,7 @@
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
   }
 
-  @media(max-width: 960px) {
+  @media screen and (max-width: 960px) {
     .rightnav {
       flex-grow: 1;
       align-content: center;
@@ -118,7 +117,7 @@
     }
   }
 
-  @media(max-width: 320px) {
+  @media screen and (max-width: 320px) {
     .rightnav {
       flex-wrap: wrap;
 
@@ -151,7 +150,7 @@
     font-family: 'Merienda One', cursive;
   }
 
-  @media(max-width: 470px) {
+  @media screen and (max-width: 470px) {
     h2 {
       justify-content: center;
       margin-left: auto;
@@ -166,7 +165,7 @@
     padding-top: 1rem;
   }
 
-  @media(max-width: 470px) {
+  @media screen and (max-width: 470px) {
     form {
       justify-content: center;
       margin-left: auto;
@@ -253,7 +252,7 @@
 
   /*We want 2 items per row and the rest goes to the next row. So, width = 100%/2 = 50% for each product. We have to set flex-basis to 50%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 50%: 46% each.*/
 
-  @media(max-width: 750px) {
+  @media screen and (max-width: 750px) {
     .first {
       flex-grow: 2;
       flex-basis: 46%;
@@ -261,7 +260,7 @@
     }
   }
 
-  @media(max-width: 750px) {
+  @media screen and (max-width: 750px) {
     .second {
       flex-grow: 1;
       flex-basis: 50%;
@@ -271,7 +270,7 @@
 
   /*We want 1 items per row and the rest goes to the next row. So, width = 100%/1 = 100% for each product. We have to set flex-basis to 100%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 100%: 96% each.*/
 
-  @media(max-width: 500px) {
+  @media screen and (max-width: 500px) {
     .first {
       flex-grow: 1;
       flex-basis: 96%;
@@ -279,7 +278,7 @@
     }
   }
 
-  @media(max-width: 500px) {
+  @media screen and (max-width: 500px) {
     .second {
       flex-grow: 1;
       flex-basis: 96%;
@@ -318,7 +317,7 @@
 
   /* Center mailing list info when there isn't enough space to display the whole line */
 
-  @media(max-width: 540px) {
+  @media screen and (max-width: 540px) {
     input {
       flex-grow: 1;
       display: flex;
@@ -361,7 +360,7 @@
 
   /* At the same time that the products change to 2 per row, the Back to Top button comes to the center bottom of the page */
 
-  @media(max-width: 750px) {
+  @media screen and (max-width: 750px) {
     a.footer {
       display: inline-flex;
       justify-content: center;
