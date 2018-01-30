@@ -10,32 +10,98 @@
     background: #f2f2f2;
   }
 
+  /**************** HERO (TOP HEADER) *****************/
+
+  /* Parent element: div.topnav */
+
+  div.topheader {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    margin-left: auto;
+    margin-right: auto;
+    background: #d9d9d9;
+  }
+
+  /* Children elements */
+
+  .logo {
+    align-self: flex-start;
+
+    max-height: 6rem;
+    margin: 2rem;
+  }
+
+  .logo-w {
+    align-self: center;
+
+    font-size: 3.5rem;
+    font-family: 'Lobster Two', cursive;
+  }
+
+  /* Resize Store name when screen reduces */
+
+  @media screen and (max-width: 960px) {
+    .logo-w {
+      flex-grow: 1;
+      flex-basis: 80%;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .logo-w {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+  }
+
   /***************** NAV *****************/
 
-  .mainnav {
-    width: 100%;
-    background: #d9d9d9;
+  /* RIGHT SIDE NAV */
+
+  /* Children element of div.topheader */
+
+  .rightnav {
+    align-self: center;
+    margin-left: auto;
+    margin-right: 2rem;
+
     padding: 1rem 2rem 1rem 2rem;
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
   }
 
-  @media screen and (max-width: 320px) {
-    .mainnav {
-      flex-wrap: wrap;
-      flex-direction: column;
+  /* Resize Right side nav when it touches Store name */
 
-      padding: 2rem 0.5rem 0.5rem 0.5rem;
+  @media screen and (max-width: 970px) {
+    .rightnav {
+      flex-grow: 1;
+      align-self: center;
+
+      margin: 0rem 0rem 0rem 0rem;
+      padding: 1rem;
+      box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  /* Resize Right side nav when on small screen by reducing padding */
+
+  @media screen and (max-width: 320px) {
+    .rightnav {
+      padding: 0.5rem;
       box-shadow: 0rem 0rem 0rem 0rem;
     }
   }
 
-  /*Flex parent element and keep content in equal space along the whoe width*/
+  /* Parent element */
 
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  /* Children elements of ul */
 
   li {
     padding: 0.5rem;
@@ -47,127 +113,71 @@
     text-decoration: none;
   }
 
-  /**************** HERO *****************/
+  /* MAIN NAV: Same as Right Nav, but along the width of the screen */
 
-  /*Inline-flex parent element*/
+  /* Parent element */
 
-  div.topheader {
-    display: inline-flex;
+  .mainnav {
     flex-wrap: wrap;
-    width: 100%;
 
-    margin-left: auto;
-    margin-right: auto;
     background: #d9d9d9;
-  }
-
-  /*Justify-content children elements*/
-
-  .logo {
-    justify-content: flex-start;
-    max-height: 6rem;
-    margin: 2rem;
-  }
-
-  .logo-w {
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 4rem 0rem 0rem 0rem;
-    font-size: 3.5rem;
-    font-family: 'Lobster Two', cursive;
-  }
-
-  @media screen and (max-width: 960px) {
-    .logo-w {
-      flex-grow: 1;
-      flex-basis: 80%;
-      margin: auto;
-    }
-  }
-
-  @media screen and (max-width: 560px) {
-    .logo-w {
-      flex-grow: 1;
-      flex-basis: 50%;
-      margin: auto;
-    }
-  }
-
-  /*This nav has the same styles as main nav, except it is flexed to the right side*/
-
-  .rightnav {
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    margin: 4rem 0rem 0rem 0rem;
-    margin-left: auto;
-    margin-right: 2rem;
-
-    height: 4rem;
     padding: 1rem 2rem 1rem 2rem;
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
   }
 
-  @media screen and (max-width: 960px) {
-    .rightnav {
-      flex-grow: 1;
-      align-content: center;
-      margin: 0rem 0rem 0rem 0rem;
-      padding: 1rem;
-      box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
-    }
-  }
+  /* Resize Main nav when on small screen by reducing padding */
 
   @media screen and (max-width: 320px) {
-    .rightnav {
-      flex-wrap: wrap;
-
+    .mainnav {
       padding: 0.5rem;
-      box-shadow: 0rem 0rem 0rem 0rem;
     }
   }
-
 
   /*********** PRODUCTS SECTION ***********/
 
-  /*Inline-flex parent element*/
+  /* Parent element: .container */
 
   .container {
     display: inline-flex;
     flex-wrap: wrap;
+
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
   }
 
-  /*justify-content children elements*/
+  /* Children elements */
 
   h2 {
-    justify-content: flex-start;
+    align-self: flex-start;
     margin-left: 2rem;
-    margin-right: auto;
+
     font-size: 2.5rem;
     color: #2d2d2d;
     font-family: 'Merienda One', cursive;
   }
 
+  /* Resize h2 */
+
   @media screen and (max-width: 470px) {
     h2 {
-      justify-content: center;
+      align-self: center;
       margin-left: auto;
       margin-right: auto;
     }
   }
 
   form {
-    justify-content: flex-end;
+    align-self: flex-end;
     margin-left: auto;
     margin-right: 2rem;
-    padding-top: 1rem;
   }
+
+  /* Resize form */
 
   @media screen and (max-width: 470px) {
     form {
-      justify-content: center;
+      align-self: center;
       margin-left: auto;
       margin-right: auto;
     }
@@ -175,40 +185,45 @@
 
   /*********** MODULES ***********/
 
-  /*Use display: flex and flex-wrap: wrap to keep article in the width chosen (90%) and go to the next row when there isn't enough space. This eliminates the use of float left.*/
+  /* Display: flex and Flex-wrap: wrap to keep article in the width chosen (90%) and go to the next row when there isn't enough space */
+
+  /* Parent element */
 
   article.products {
-    margin: 2rem;
     display: flex;
     flex-wrap: wrap;
+    margin: 2rem;
   }
 
   .first,
   .second {
-    display: flex;
     flex-direction: column;
 
     border: 1.5px solid #e6e6e6;
   }
 
-  /*We want 3 items per row and the rest goes to the next row. So, width = 100%/3 = 33.33% for each product. We have to set flex-basis to 33.33%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 33.33%: 29.33% each.*/
+  /* 3 items per row and the rest goes to the next row. Width = 100%/3 = 33.33% for each product. Flex-basis=33.33%. EXCEPT: because of padding = 2%, width will be over 100%. Substract 4% (2%*2%) from 33.33%: flex-basis = 29.33% */
 
   .first {
-    padding: 2%;
+    display: flex;
     flex-grow: 1;
     flex-basis: 29.33%;
-    display: flex;
+
+    padding: 2%;
   }
 
 
-  /*We want 2 items in this row, so we add flex-grow: 0, so it doesn't extend to the whole space.*/
+  /* 2 items in this row, and no exansion in the whole space, so Flex-grow: 0 and Flex-basis = 33.33% */
 
   .second {
-    padding: 2%;
+    display: flex;
     flex-grow: 0;
     flex-basis: 33.33%;
-    display: flex;
+
+    padding: 2%;
   }
+
+  /* Children elements */
 
   h3 {
     padding-top: 0.5rem;
@@ -226,70 +241,70 @@
   }
 
   .text {
-    margin-top: auto;
+    flex-grow: 1;
+
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    text-align: center;
+    text-align: justify;
 
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
     color: #2d2d2d;
-    text-align: justify;
-    flex-grow: 1;
   }
 
   h4 {
-    text-align: center;
     flex-grow: 1;
+
+    text-align: center;
   }
 
   .rating {
-    text-align: center;
     flex-grow: 1;
+
+    text-align: center;
   }
 
-  /**************** RESIZING ****************/
+  /* Resize products */
 
-  /*We want 2 items per row and the rest goes to the next row. So, width = 100%/2 = 50% for each product. We have to set flex-basis to 50%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 50%: 46% each.*/
+  /*2 items per row: width = 100%/2 = 50% for each product. So, Flex-basis = 50%. Padding of 2% for each item, so substract 4% (2%*2%): Flex-basis = 46% */
 
   @media screen and (max-width: 750px) {
     .first {
+      display: flex;
       flex-grow: 2;
       flex-basis: 46%;
-      display: flex;
     }
   }
 
   @media screen and (max-width: 750px) {
     .second {
+      display: flex;
       flex-grow: 1;
       flex-basis: 50%;
-      display: flex;
     }
   }
 
-  /*We want 1 items per row and the rest goes to the next row. So, width = 100%/1 = 100% for each product. We have to set flex-basis to 100%. But the padding of 2% for each item will make the width over 100%. So, we have to substract 4% (2%*2%) from 100%: 96% each.*/
+  /* 1 items per row: width = 100%/1 = 100% for each product. So, Flex-basis to 100%. Padding of 2% for each, so substract 4% (2%*2%): Flex-basis = 96% */
 
   @media screen and (max-width: 500px) {
     .first {
+      display: flex;
       flex-grow: 1;
       flex-basis: 96%;
-      display: flex;
     }
   }
 
   @media screen and (max-width: 500px) {
     .second {
+      display: flex;
       flex-grow: 1;
       flex-basis: 96%;
-      display: flex;
     }
   }
-
 
   /**************** ASIDE ****************/
 
-  /*Inline-flex parent element*/
+  /* Parent element: aside */
 
   aside {
     display: inline-flex;
@@ -303,14 +318,17 @@
   input {
     padding: .5rem;
     margin: 0.5em;
+
     border-radius: 0.5em;
   }
 
   input[type="submit"] {
     padding: .5rem;
     background: #f2f2f2;
+
     border: 2px solid #d9d9d9;
     border-radius: 6px;
+
     font-size: 1rem;
     color: black;
   }
@@ -327,14 +345,19 @@
 
   /**************** FOOTER ****************/
 
+  /* Parent element: footer */
+
   footer {
+    width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
-    width: 100%;
+
     padding: 2rem;
     background: #d9d9d9;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
   }
+
+  /* Children elements */
 
   article.footer {
     flex-grow: 1;
@@ -343,26 +366,26 @@
   }
 
   p.footer {
+    flex-grow: 1;
+
     padding-top: 0.15rem;
     padding-bottom: 0.15rem;
     text-align: center;
     font-weight: lighter;
     color: #2d2d2d;
-    flex-grow: 1;
   }
 
   a.footer {
-    padding: 0.5rem;
     flex-grow: 1;
-    display: inline-flex;
-    justify-content: flex-end;
+    align-self: flex-end;
+
+    padding: 0.5rem;
   }
 
-  /* At the same time that the products change to 2 per row, the Back to Top button comes to the center bottom of the page */
+  /* Resize footer: When products change to 2 per row, Back to Top button moves to center bottom of page */
 
   @media screen and (max-width: 750px) {
     a.footer {
-      display: inline-flex;
-      justify-content: center;
+      align-self: center;
     }
   }
