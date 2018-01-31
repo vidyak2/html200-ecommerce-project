@@ -7,7 +7,7 @@
   body {
     font-size: 100%;
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-    background: #f2f2f2;
+    background: #ffff;
   }
 
   /**************** HERO (TOP HEADER) *****************/
@@ -21,7 +21,7 @@
 
     margin-left: auto;
     margin-right: auto;
-    background: #d9d9d9;
+    background: #e6ebff;
   }
 
   /* Children elements */
@@ -67,8 +67,8 @@
     margin-left: auto;
     margin-right: 2rem;
 
-    padding: 1rem 2rem 1rem 2rem;
-    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
   }
 
   /* Resize Right side nav when it touches Store name */
@@ -79,16 +79,13 @@
       align-self: center;
 
       margin: 0rem 0rem 0rem 0rem;
-      padding: 1rem;
-      box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+      padding: 0.5rem;
+      box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
     }
   }
 
-  /* Resize Right side nav when on small screen by reducing padding */
-
   @media screen and (max-width: 320px) {
     .rightnav {
-      padding: 0.5rem;
       box-shadow: 0rem 0rem 0rem 0rem;
     }
   }
@@ -120,9 +117,9 @@
   .mainnav {
     flex-wrap: wrap;
 
-    background: #d9d9d9;
-    padding: 1rem 2rem 1rem 2rem;
-    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+    background: #e6ebff;
+    padding: 0.5rem 2rem;
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
   }
 
   /* Resize Main nav when on small screen by reducing padding */
@@ -199,7 +196,7 @@
   .second {
     flex-direction: column;
 
-    border: 1.5px solid #e6e6e6;
+    border: 1.5px solid #e6ebff;
   }
 
   /* 3 items per row and the rest goes to the next row. Width = 100%/3 = 33.33% for each product. Flex-basis=33.33%. EXCEPT: because of padding = 2%, width will be over 100%. Substract 4% (2%*2%) from 33.33%: flex-basis = 29.33% */
@@ -324,7 +321,7 @@
 
   input[type="submit"] {
     padding: .5rem;
-    background: #f2f2f2;
+    background: #e6ebff;
 
     border: 2px solid #d9d9d9;
     border-radius: 6px;
@@ -353,7 +350,7 @@
     flex-wrap: wrap;
 
     padding: 2rem;
-    background: #d9d9d9;
+    background: #e6ebff;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
   }
 
