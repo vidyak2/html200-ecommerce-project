@@ -26,12 +26,21 @@
 
   /* Children elements */
 
-  .logo {
-    align-self: flex-start;
+  /*Logo image*/
 
-    max-height: 6rem;
-    margin: 2rem;
+  /*Height and width in percentages. When using resized images, the proportions will stay.*/
+
+  .logo {
+    max-width: 100%;
   }
+
+  div.imgcontainer {
+    width: 10%;
+    height: 100%;
+    margin: 1rem 1rem 1rem 2rem;
+  }
+
+  /*Store Name*/
 
   .logo-w {
     align-self: center;
