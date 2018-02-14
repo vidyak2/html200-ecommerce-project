@@ -8,6 +8,8 @@
     font-size: 100%;
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     background-color: #FFFFFF;
+
+    background: linear-gradient(rgba(153, 204, 255, 0.8), rgba(153, 204, 255, 0.2), rgba(153, 204, 255, 0.1), rgba(153, 204, 255, 0), rgba(153, 204, 255, 0.1), rgba(153, 204, 255, 0.2), rgba(153, 204, 255, 0.8));
   }
 
   /**************** HERO (TOP HEADER) *****************/
@@ -21,7 +23,6 @@
 
     margin-left: auto;
     margin-right: auto;
-    background: #e6ebff;
   }
 
   /* Children elements */
@@ -125,8 +126,6 @@
 
   .mainnav {
     flex-wrap: wrap;
-
-    background: #e6ebff;
     padding: 0.5rem 2rem;
     box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
   }
@@ -359,7 +358,6 @@
     flex-wrap: wrap;
 
     padding: 2rem;
-    background: #e6ebff;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
   }
 
