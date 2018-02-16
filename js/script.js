@@ -53,6 +53,32 @@ var products = [
 ]
 
 //Function triggered on submission
+function search() {
+  //Prevent default refresh
+  event.preventDefault();
+  console.log("form submitted")
+
+  //Retrieve Search input by user
+  var SearchBar = document.research.searchbar.value
+
+  //Output to the console
+  console.log("You searched for " + SearchBar)
+}
+
+//Function to retrieve Chatbox input by user
+function chatting() {
+  //Prevent default submit
+  event.preventDefault();
+  console.log("form submitted")
+
+  //Retrieve value input by user
+  var ChatBox = document.question.chatarea.value
+
+  //Output to the console
+  console.log("Thank you for asking: " + ChatBox + ". The next available associate will be able to help you.")
+}
+
+//
 function capture() {
   //Prevent default refresh
   event.preventDefault();
