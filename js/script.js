@@ -52,3 +52,15 @@ var products = [
   }
 ]
 
+//Function triggered on submission
+function capture() {
+  //Prevent default refresh
+  event.preventDefault();
+  console.log("form submitted")
+
+  //Retrieve value input by user
+  var EMail = document.custInfo.email.value
+
+  //Output to the console
+  console.log("Thank you " + EMail + " for singing up to our mailing list!")
+}
