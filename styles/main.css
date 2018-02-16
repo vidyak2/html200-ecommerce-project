@@ -362,7 +362,7 @@
 
   /* 1 items per row: width = 100%/1 = 100% for each product. So, Flex-basis to 100%. Padding of 2% for each, so substract 4% (2%*2%): Flex-basis = 96% */
 
-  @media screen and (max-width: 570px) {
+  @media screen and (max-width: 600px) {
     .first {
       display: flex;
       flex-grow: 1;
@@ -370,7 +370,7 @@
     }
   }
 
-  @media screen and (max-width: 570px) {
+  @media screen and (max-width: 600px) {
     .second {
       display: flex;
       flex-grow: 1;
