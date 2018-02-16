@@ -222,10 +222,11 @@
 
 
       <aside>
-        <form>
+        <!-- Form linked to JS form handler -->
+        <form name="custInfo" onsubmit="capture()">
           <label class="mail">Sign up for our mailing list:
-          <input type="email" name="email" placeholder="someone@example.com">
-        </label>
+            <input type="email" name="email" placeholder="someone@example.com">
+          </label>
 
           <input type="submit" value="Submit">
         </form>
