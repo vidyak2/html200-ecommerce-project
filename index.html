@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Merienda+One" rel="stylesheet">
 
   <!-- TODO: Font Awesome CDN link -->
-  <script src="https://use.fontawesome.com/d3b7bc5f60.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 
@@ -26,14 +26,24 @@
     <!--Logo, store name and right side nav on the same line-->
     <div class="topheader">
 
-      <!-- Logo originally has width of 640px and height of 1280px -->
-      <!-- Few viewports: 1200x, 970px, 800px, 640px, 480px, 320px. Corresponding widths: 120px, 97px, 80px, 64px, 48px, 32px.-->
-
+      <!-- Resize logo -->
       <div class="imgcontainer">
         <img class="logo" srcset="images/logo-scarfcat-640w.png 640w, images/logo-scarfcat-200w.png 200w, images/logo-scarfcat-80w.png 80w" sizes="(max-width: 800px) 80px, (max-width: 1200px) 200px, (min-width: 1201px) 640px" src="images/logo-scarfcat-640w.png" alt="dapper cartoon cat wearing a scarf">
       </div>
 
       <h1 class="logo-w">Winter Wear Warehouse</h1>
+
+      <!-- Center top Submit form -->
+      <article class="right">
+        <form name="research" onsubmit="search()">
+          <label>
+              <input class="right" type="text" name="searchbar" placeholder="Search by keyword">
+              <i class="fas fa-search"></i>
+            </label>
+        </form>
+      </article>
+
+      <!-- Right side nav-->
       <nav class="rightnav">
         <ul>
           <li><a href="#">Sign in</a></li>
@@ -43,7 +53,7 @@
       </nav>
     </div>
 
-    <!--Main nav on the line below-->
+    <!--Main nav on line below-->
     <nav class="mainnav">
       <ul>
         <li><a href="#">Jackets</a></li>
@@ -60,11 +70,63 @@
 
   <main>
 
+    <!-- Left side Checkbox form -->
+    <aside class="leftaside">
+      <form method="GET">
+        <fieldset>
+          <legend>
+            Style
+          </legend>
+
+          <label>
+            <input type="checkbox" name="type" value="twistwrap">
+            Wrap
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="infinity">
+            Infinity
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="twill">
+            Twill
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Length
+          </legend>
+
+          <label>
+            <input type="checkbox" name="lenght" value="short">
+            Short
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="length" value="medium">
+            Medium
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="length" value="long">
+            Long
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="length" value="xlong">
+            X-Long
+          </label>
+        </fieldset>
+      </form>
+    </aside>
+
     <section class="container">
       <h2>Scarves</h2>
 
       <!--Form for Sort by:-->
-      <form method="GET">
+      <form class="SortBy" method="GET">
         <label>Sort by:
                 <select name="sort">
                   <option value="" selected>Relevance</option>
@@ -88,11 +150,11 @@
           <h4>26.99</h4>
           <!-- Rating and number of reviews -->
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i> 
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i> 
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (40)
           </a>
         </div>
@@ -106,11 +168,11 @@
           <h4>18.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (29)
           </a>
         </div>
@@ -123,11 +185,11 @@
           <h4>22.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (1)
           </a>
         </div>
@@ -141,11 +203,11 @@
           <h4>29.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (259)
           </a>
         </div>
@@ -158,11 +220,11 @@
           <h4>11.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
             (1159)
           </a>
         </div>
@@ -175,11 +237,11 @@
           <h4>70.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (0)
           </a>
         </div>
@@ -193,11 +255,11 @@
           <h4>49.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (63)
           </a>
         </div>
@@ -210,19 +272,19 @@
           <h4>26.99</h4>
 
           <a href="#" class="rating">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
             (96)
           </a>
         </div>
       </article>
 
-
-      <aside>
-        <!-- Form linked to JS form handler -->
+      <!-- E-mail form -->
+      <aside class="mail">
+        <!-- Link to JS form handler -->
         <form name="custInfo" onsubmit="capture()">
           <label class="mail">Sign up for our mailing list:
             <input type="email" name="email" placeholder="someone@example.com">
@@ -232,23 +294,33 @@
         </form>
       </aside>
 
+      <!-- Chat form-->
+      <aside class="chat">
+        <form name="question" onsubmit="chatting()">
+          <label>Questions? <i class="far fa-comment"></i><br>
+            <input class="box" type="text" name="chatarea" placeholder="Chat with an associate!">
+          </label>
+        </form>
+      </aside>
+
     </section>
 
-    <footer>
-      <article class="footer">
-        <p class="footer">Mon.-Fri. 8am-5pm</p>
-        <p class="footer">Sat.-Sun. 10am-8pm</p>
-
-        <p class="footer">1234 Abcd St, Seattle, WA, 56789</p>
-        <p class="footer">Tel. (012)-345-6789</p>
-
-        <!-- Back to top button, with FontAwesome link -->
-        <a class="footer" href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> Back to Top</a>
-      </article>
-
-    </footer>
-
   </main>
+
+  <footer>
+    <article class="footer">
+      <p class="footer">Mon.-Fri. 8am-5pm</p>
+      <p class="footer">Sat.-Sun. 10am-8pm</p>
+
+      <p class="footer">1234 Abcd St, Seattle, WA, 56789</p>
+      <p class="footer">Tel. (012)-345-6789</p>
+
+
+      <!-- Back to top button, with FontAwesome link -->
+      <a class="footer" href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i> Back to Top</a>
+    </article>
+
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
