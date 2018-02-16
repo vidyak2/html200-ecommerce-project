@@ -70,7 +70,17 @@
 
   /* RIGHT SIDE NAV */
 
-  /* Children element of div.topheader */
+  /* Children elements of div.topheader */
+
+  .right {
+    align-self: flex-start;
+    padding: 0.5rem;
+  }
+
+  input.right {
+    width: 20rem;
+    text-align: center;
+  }
 
   .rightnav {
     align-self: center;
@@ -83,7 +93,7 @@
 
   /* Resize Right side nav when it touches Store name */
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1400px) {
     .rightnav {
       flex-grow: 1;
       align-self: center;
@@ -97,6 +107,22 @@
   @media screen and (max-width: 320px) {
     .rightnav {
       box-shadow: 0rem 0rem 0rem 0rem;
+    }
+  }
+
+  /* Resize Search bar */
+
+  @media screen and (max-width: 542px) {
+    .right {
+      align-self: center;
+      margin: 0rem 0rem 0rem 0rem;
+    }
+  }
+
+  @media screen and (max-width: 542px) {
+    input.right {
+      width: 8rem;
+      text-align: center;
     }
   }
 
@@ -138,6 +164,51 @@
     }
   }
 
+  /***************** MAIN *****************/
+
+  /* Parent element */
+
+  main {
+    display: inline-flex;
+  }
+
+  /* Children elements */
+
+  .leftaside {
+    margin-top: 3.8rem;
+    margin-bottom: auto;
+
+    padding: 2rem;
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  /* Resize Left aside when on small screen by reducing padding and top margin */
+
+  @media screen and (max-width: 750px) {
+    .leftaside {
+      margin-top: 4.8rem;
+      padding: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .leftaside {
+      margin-top: 5.6rem;
+      padding: 0rem;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .leftaside {
+      margin-top: 2rem;
+      padding: 0rem;
+    }
+  }
+
   /*********** PRODUCTS SECTION ***********/
 
   /* Parent element: .container */
@@ -172,7 +243,7 @@
     }
   }
 
-  form {
+  .SortBy {
     align-self: flex-end;
     margin-left: auto;
     margin-right: 2rem;
@@ -218,7 +289,7 @@
   }
 
 
-  /* 2 items in this row, and no exansion in the whole space, so Flex-grow: 0 and Flex-basis = 33.33% */
+  /* 2 items in this row, and no expansion in the whole space, so Flex-grow: 0 and Flex-basis = 33.33% */
 
   .second {
     display: flex;
@@ -346,6 +417,17 @@
       display: flex;
       justify-content: center;
     }
+  }
+
+
+  /* Chat Box */
+
+  aside.chat {
+    margin-right: 2rem;
+  }
+
+  input.box {
+    height: 4rem;
   }
 
   /**************** FOOTER ****************/
