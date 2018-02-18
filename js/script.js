@@ -52,11 +52,11 @@ var products = [
   }
 ]
 
-//Function triggered on submission
+//Function to Search, triggered on submission
 function search() {
   //Prevent default refresh
   event.preventDefault();
-  console.log("form submitted")
+  console.log("Form Submitted")
 
   //Retrieve Search input by user
   var SearchBar = document.research.searchbar.value
@@ -65,28 +65,22 @@ function search() {
   console.log("You searched for " + SearchBar)
 }
 
-//Function to retrieve Chatbox input by user
+//Function to retrieve Chatbox input 
 function chatting() {
-  //Prevent default submit
   event.preventDefault();
-  console.log("form submitted")
+  console.log("Form Submitted")
 
-  //Retrieve value input by user
   var ChatBox = document.question.chatarea.value
 
-  //Output to the console
   console.log("Thank you for asking: " + ChatBox + ". The next available associate will be able to help you.")
 }
 
-//
+//unction to retrieve Mailing list input 
 function capture() {
-  //Prevent default refresh
   event.preventDefault();
-  console.log("form submitted")
+  console.log("Form Submitted")
 
-  //Retrieve value input by user
   var EMail = document.custInfo.email.value
 
-  //Output to the console
   console.log("Thank you " + EMail + " for singing up to our mailing list!")
 }
