@@ -73,7 +73,7 @@
 
   <main>
 
-    <!-- Left side Checkbox form -->
+    <!-- Left side Checkbox form: Shown ONLY when screen is wider than 542px -->
     <aside class="leftaside">
       <form method="GET">
 
@@ -140,6 +140,30 @@
             <option value="increasing">Price: Low to High</option>
             <option value="decreasing">Price: High to Low</option>
             <option value="rating">Ratings</option>
+          </select>
+        </label>
+      </form>
+
+      <!-- Left side Checkbox form BECOMES two top center dropdown forms: Shown ONLY when screen is below 542px -->
+      <form class="typecenter" method="GET">
+        <label>Style:
+          <select name="style">
+            <option value="" selected>All</option>
+            <option value="wrap">Wrap</option>
+            <option value="infinity">Infinity</option>
+            <option value="twill">Twill</option>
+          </select>
+        </label>
+      </form>
+
+      <form class="lengthcenter" method="GET">
+        <label>Length:
+          <select name="length">
+            <option value="" selected>All</option>
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+            <option value="xlong">X-Long</option>
           </select>
         </label>
       </form>
