@@ -110,22 +110,6 @@
     }
   }
 
-  /* Resize Search bar */
-
-  @media screen and (max-width: 542px) {
-    .rightside {
-      align-self: center;
-      margin: 0rem 0rem 0rem 0rem;
-    }
-  }
-
-  @media screen and (max-width: 542px) {
-    input.right {
-      width: 8rem;
-      text-align: center;
-    }
-  }
-
   /* Parent element */
 
   ul {
@@ -199,17 +183,29 @@
     }
   }
 
-  @media screen and (max-width: 650px) {
+  /* Until a max-width of 542px, the left aside does not display */
+
+  @media screen and (max-width: 542px) {
     .leftaside {
-      margin-top: 5.6rem;
-      padding: 0rem;
+      display: none;
+    }
+
+    .SortBy,
+    .typecenter,
+    .lengthcenter {
+      align-self: flex-end;
+      margin-left: 0rem;
+      margin-right: 2rem;
+      padding-top: 0.5rem;
     }
   }
 
-  @media screen and (max-width: 540px) {
-    .leftaside {
-      margin-top: 2rem;
-      padding: 0.5rem;
+  /* Until a min-width of 542px, typecenter and lengthcenter do not display. */
+
+  @media screen and (min-width: 542px) {
+    .typecenter,
+    .lengthcenter {
+      display: none;
     }
   }
 
