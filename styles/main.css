@@ -174,41 +174,6 @@
     padding: 1rem;
   }
 
-  /* Resize Left aside when on small screen by reducing padding and top margin */
-
-  @media screen and (max-width: 750px) {
-    .leftaside {
-      margin-top: 4.8rem;
-      padding: 1rem;
-    }
-  }
-
-  /* Until a max-width of 542px, the left aside does not display */
-
-  @media screen and (max-width: 542px) {
-    .leftaside {
-      display: none;
-    }
-
-    .SortBy,
-    .typecenter,
-    .lengthcenter {
-      align-self: flex-end;
-      margin-left: 0rem;
-      margin-right: 2rem;
-      padding-top: 0.5rem;
-    }
-  }
-
-  /* Until a min-width of 542px, typecenter and lengthcenter do not display. */
-
-  @media screen and (min-width: 542px) {
-    .typecenter,
-    .lengthcenter {
-      display: none;
-    }
-  }
-
   /*********** PRODUCTS SECTION ***********/
 
   /* Parent element: .container */
@@ -233,6 +198,12 @@
     font-family: 'Merienda One', cursive;
   }
 
+  .SortBy {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
   /* Resize h2 */
 
   @media screen and (max-width: 470px) {
@@ -243,12 +214,6 @@
     }
   }
 
-  .SortBy {
-    align-self: flex-end;
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-
   /* Resize form */
 
   @media screen and (max-width: 470px) {
@@ -256,6 +221,40 @@
       align-self: center;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  /* Resize Left aside when on small screen by reducing padding and top margin */
+
+  @media screen and (max-width: 750px) {
+    .leftaside {
+      margin-top: 4.8rem;
+      padding: 1rem;
+    }
+  }
+
+  /* Until a max-width of 542px, the left aside does not display */
+
+  @media screen and (max-width: 542px) {
+    .leftaside {
+      display: none;
+    }
+
+    /* Below 542px, left aside becomes dropdown menus, and aligns with Sort By */
+    .SortBy,
+    .typecenter,
+    .lengthcenter {
+      align-self: flex-start;
+      margin-left: 2rem;
+    }
+  }
+
+  /* Until a min-width of 542px, typecenter and lengthcenter (dropdown menus) do not display. */
+
+  @media screen and (min-width: 542px) {
+    .typecenter,
+    .lengthcenter {
+      display: none;
     }
   }
 

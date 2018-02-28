@@ -75,7 +75,7 @@ function chatting() {
   console.log("Thank you for asking: " + ChatBox + ". The next available associate will be able to help you.")
 }
 
-//unction to retrieve Mailing list input 
+//Function to retrieve Mailing list input 
 function capture() {
   event.preventDefault();
   console.log("Form Submitted")
@@ -83,4 +83,34 @@ function capture() {
   var EMail = document.custInfo.email.value
 
   console.log("Thank you " + EMail + " for singing up to our mailing list!")
+}
+
+//Function to retrieve Sort By value
+function sortchoice() {
+  event.preventDefault();
+  console.log("Form Submitted")
+
+  var Sorted = document.getElementById("sort").value;
+
+  console.log("You have chosen to sort by " + Sorted + ".")
+}
+
+//Function to retrieve Style value in dropdown
+function stylechoice() {
+  event.preventDefault();
+  console.log("Form Submitted")
+
+  var Style = document.getElementById("style").value;
+
+  console.log("You have chosen to see scarves of " + Style + " style.")
+}
+
+//Function to retrieve Length in dropdown
+function lengthchoice() {
+  event.preventDefault();
+  console.log("Form Submitted")
+
+  var Length = document.getElementById("length").value;
+
+  console.log("You have chosen to see scarves of " + Length + " length.")
 }
