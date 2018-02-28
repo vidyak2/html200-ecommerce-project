@@ -17,7 +17,7 @@
   <!--  Google font link -->
   <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Merienda+One" rel="stylesheet">
 
-  <!-- TODO: Font Awesome CDN link -->
+  <!-- Font Awesome CDN link -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
@@ -135,8 +135,9 @@
       <!--Form for Sort by-->
       <form class="SortBy" method="GET">
         <label>Sort by:
-          <select name="sort">
-            <option value="" selected>Relevance</option>
+          <!-- Function to store user choice -->
+          <select id="sort" onchange="sortchoice()">
+            <option value="relevance" selected>Relevance</option>
             <option value="increasing">Price: Low to High</option>
             <option value="decreasing">Price: High to Low</option>
             <option value="rating">Ratings</option>
@@ -144,11 +145,11 @@
         </label>
       </form>
 
-      <!-- Left side Checkbox form BECOMES two top center dropdown forms: Shown ONLY when screen is below 542px -->
+      <!-- Left side Checkbox form BECOMES top center dropdown forms: Shown ONLY when screen is less than 542px -->
       <form class="typecenter" method="GET">
         <label>Style:
-          <select name="style">
-            <option value="" selected>All</option>
+          <select id="style" onchange="stylechoice()">
+            <option value="all" selected>All</option>
             <option value="wrap">Wrap</option>
             <option value="infinity">Infinity</option>
             <option value="twill">Twill</option>
@@ -158,8 +159,8 @@
 
       <form class="lengthcenter" method="GET">
         <label>Length:
-          <select name="length">
-            <option value="" selected>All</option>
+          <select id="length" onchange="lengthchoice()">
+            <option value="all" selected>All</option>
             <option value="short">Short</option>
             <option value="medium">Medium</option>
             <option value="long">Long</option>
