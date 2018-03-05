@@ -114,3 +114,75 @@ function lengthchoice() {
 
   console.log("You have chosen to see scarves of " + Length + " length.")
 }
+
+//Index of elements in shopping cart
+var answers = [
+]
+
+//Actual shopping cart
+var shoppingcart = [
+
+]
+
+//Reversible Plaid
+//This same function will be redone for every element, except item name will change
+function cart() {
+
+  event.preventDefault()
+
+  //Retrieve value from form
+  var response = document.getElementById("adddelete").value
+
+  //Check if value is already in answers
+  var i = answers.indexOf(response)
+
+  //If no, insert it
+  if (i == -1) {
+    answers.push(response)
+    console.log(answers)
+    console.log(answers.length)
+    //Add item name to array
+    shoppingcart.push("Plaid")
+    console.log(shoppingcart)
+  }
+  //If yes, remove it
+  else {
+    answers.pop(response)
+    console.log(answers)
+    console.log(answers.length)
+    //Remove item name from array
+    shoppingcart.pop("Plaid")
+    console.log(shoppingcart)
+  }
+}
+
+//Fringed Plaid
+function cart() {
+
+  event.preventDefault()
+
+  //Retrieve value from form
+  var response = document.getElementById("adddelete").value
+
+  //Check if value is already in answers
+  var i = answers.indexOf(response)
+
+  //If no, insert it
+  if (i == -1) {
+    answers.push(response)
+    console.log(answers)
+    console.log(answers.length)
+    //Add item name to array
+    shoppingcart.push("Plaid")
+    console.log(shoppingcart)
+  }
+  //If yes, remove it
+  else {
+    answers.pop(response)
+    console.log(answers)
+    console.log(answers.length)
+    //Remove item name from array
+    shoppingcart.pop("Plaid")
+    console.log(shoppingcart)
+  }
+}
