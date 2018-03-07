@@ -119,7 +119,7 @@ function lengthchoice() {
 var cart = [
 ]
 
-//This same function will be redone for every element, except item name will change
+//Function will be redone for every element, except item name will change
 //Retrieve information from form, by adding directly when calling function
 function updatedCart(item) {
   //  event.preventDefault()
@@ -141,3 +141,64 @@ function updatedCart(item) {
     console.log('You have ' + cart.length + ' items in the cart.')
   }
 }
+
+//Extra challenge #1
+//Function to see what items are in the cart
+function totalCart() {
+  console.log(cart)
+}
+
+//Actual shopping cart
+var price = [
+]
+
+
+
+//Extra challenge #2
+//Function to calculate cost in cart
+function calculate(itemPrice) {
+  //Check if value is already in the shopping cart
+  var i = price.indexOf(itemPrice)
+  console.log(i)
+
+  priceValue = parseInt(itemPrice)
+  //If no, insert item
+  if (i == -1) {
+    price.push(itemPrice)
+    console.log(itemPrice)
+    //Add item name to array
+  }
+  //If yes, remove item
+  else {
+    //Remove 1 item from the index of the chosen item
+    price.splice(i, 1)
+    console.log('-' + itemPrice)
+  }
+}
+
+////Function to see what items are in the cart
+//function totalCart() {
+//  console.log(cart)
+//}
+
+
+////Extra challenge #2
+////Function to see what items are in the cart
+//function calculate(itemPrice) {
+//  var i = price.indexOf(itemPrice)
+//  console.log(i)
+//  //Add or substract prices in cart
+//  if (i == -1) {
+//    //Convert price string into a number
+//    priceValue = parseInt(itemPrice)
+//    price.push(priceValue)
+//    console.log('Your total is ' + priceValue + '$.')
+//  }
+//  //If yes, remove item
+//  else {
+//    //Remove 1 item from the index of the chosen item
+//    priceValue = parseInt(itemPrice)
+//    price.splice(i, 1)
+//    console.log(itemPrice + ' has been removed from your cart.')
+//  }
+//}
