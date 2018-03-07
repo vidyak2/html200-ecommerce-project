@@ -115,74 +115,29 @@ function lengthchoice() {
   console.log("You have chosen to see scarves of " + Length + " length.")
 }
 
-//Index of elements in shopping cart
-var answers = [
-]
-
 //Actual shopping cart
-var shoppingcart = [
-
+var cart = [
 ]
 
-//Reversible Plaid
 //This same function will be redone for every element, except item name will change
-function cart() {
-
-  event.preventDefault()
-
-  //Retrieve value from form
-  var response = document.getElementById("adddelete").value
-
-  //Check if value is already in answers
-  var i = answers.indexOf(response)
-
-  //If no, insert it
+//Retrieve information from form, by adding directly when calling function
+function updatedCart(item) {
+  //  event.preventDefault()
+  //Check if value is already in the shopping cart
+  var i = cart.indexOf(item)
+  console.log(i)
+  //If no, insert item
   if (i == -1) {
-    answers.push(response)
-    console.log(answers)
-    console.log(answers.length)
+    cart.push(item)
+    console.log(item + ' has been added to your cart.')
+    console.log('You have ' + cart.length + ' items in the cart.')
     //Add item name to array
-    shoppingcart.push("Plaid")
-    console.log(shoppingcart)
   }
-  //If yes, remove it
+  //If yes, remove item
   else {
-    answers.pop(response)
-    console.log(answers)
-    console.log(answers.length)
-    //Remove item name from array
-    shoppingcart.pop("Plaid")
-    console.log(shoppingcart)
-  }
-}
-
-//Fringed Plaid
-function cart() {
-
-  event.preventDefault()
-
-  //Retrieve value from form
-  var response = document.getElementById("adddelete").value
-
-  //Check if value is already in answers
-  var i = answers.indexOf(response)
-
-  //If no, insert it
-  if (i == -1) {
-    answers.push(response)
-    console.log(answers)
-    console.log(answers.length)
-    //Add item name to array
-    shoppingcart.push("Plaid")
-    console.log(shoppingcart)
-  }
-  //If yes, remove it
-  else {
-    answers.pop(response)
-    console.log(answers)
-    console.log(answers.length)
-    //Remove item name from array
-    shoppingcart.pop("Plaid")
-    console.log(shoppingcart)
+    //Remove 1 item from the index of the chosen item
+    cart.splice(i, 1)
+    console.log(item + ' has been removed from your cart.')
+    console.log('You have ' + cart.length + ' items in the cart.')
   }
 }
