@@ -125,13 +125,11 @@ function updatedCart(item) {
   //  event.preventDefault()
   //Check if value is already in the shopping cart
   var i = cart.indexOf(item)
-  console.log(i)
   //If no, insert item
   if (i == -1) {
     cart.push(item)
     console.log(item + ' has been added to your cart.')
     console.log('You have ' + cart.length + ' items in the cart.')
-    //Add item name to array
   }
   //If yes, remove item
   else {
@@ -145,41 +143,44 @@ function updatedCart(item) {
 //Extra challenge #1
 //Function to see what items are in the cart
 function totalCart() {
-  console.log(cart)
+  console.log("Items in cart: " + cart)
 }
 
 //Actual shopping cart
 var price = [
 ]
 
-
-
 //Extra challenge #2
 //Function to calculate cost in cart
 function calculate(itemPrice) {
-  //Check if value is already in the shopping cart
-  var i = price.indexOf(itemPrice)
-  console.log(i)
 
-  priceValue = parseInt(itemPrice)
-  //If no, insert item
+  var i = price.indexOf(itemPrice)
+
   if (i == -1) {
+    //    itemPrice = parseInt(itemPrice)
     price.push(itemPrice)
     console.log(itemPrice)
-    //Add item name to array
-  }
-  //If yes, remove item
-  else {
-    //Remove 1 item from the index of the chosen item
+
+
+  } else {
+    //    itemPrice = parseInt(itemPrice)
     price.splice(i, 1)
     console.log('-' + itemPrice)
   }
+
+  //Display array of prices in cart
+  console.log(price)
 }
 
-////Function to see what items are in the cart
-//function totalCart() {
-//  console.log(cart)
-//}
+//Function to see what items are in cart
+function totalCost() {
+  //Convert total cart price strings into numbers (with decimals)
+  priceValue = parseFloat(price)
+
+  console.log(priceValue)
+
+  //  console.log("Price of items in cart: " + priceValue + "$")
+}
 
 
 ////Extra challenge #2

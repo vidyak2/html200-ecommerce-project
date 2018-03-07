@@ -52,7 +52,7 @@
           <li><a href="#">Sign in</a></li>
           <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Locator</a></li>
           <!-- On click: enumerate items in cart and the total price -->
-          <li class="cart-info" onclick="totalCart()" onclick="totalCost()"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+          <li class="cart-info" onclick="totalCart(); totalCost()"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -213,7 +213,7 @@
             (29)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Fringed Plaid')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Fringed Plaid'); calculate('18.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -233,7 +233,7 @@
             (1)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Multi Color')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Multi Color'); calculate('2.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
 
@@ -253,7 +253,7 @@
             (259)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Northern Lights'); updatedPrice('29.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Northern Lights'); calculate('29.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -272,7 +272,7 @@
             (1159)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Ombre Infinity'); updatedPrice('11.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Ombre Infinity'); calculate('11.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -291,7 +291,7 @@
             (0)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Ashby Twill'); updatedPrice('70.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Ashby Twill'); calculate('70.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <!-- New class for the last row that only has 2 items -->
@@ -311,7 +311,7 @@
             (63)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Wool Cable Knit'); updatedPrice('49.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
+          <button id="adddelete" onclick="updatedCart('Wool Cable Knit'); calculate('49.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="second">
@@ -331,7 +331,7 @@
             (96)
           </a>
 
-          <button id="adddelete" onclick="updatedCart('Etro Paisley-Print Silk'); updatedPrice('4.99')"> + / - </button>
+          <button id="adddelete" onclick="updatedCart('Etro Paisley-Print Silk'); calculate('4.99')"> + / - </button>
         </div>
       </article>
 
