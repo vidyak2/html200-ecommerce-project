@@ -115,7 +115,7 @@ function lengthchoice() {
   console.log("You have chosen to see scarves of " + Length + " length.")
 }
 
-//Actual shopping cart
+//Items in shopping cart
 var cart = [
 ]
 
@@ -146,7 +146,7 @@ function totalCart() {
   console.log("Items in cart: " + cart)
 }
 
-//Actual shopping cart
+//Prices in shopping cart
 var price = [
 ]
 
@@ -157,49 +157,40 @@ function calculate(itemPrice) {
   var i = price.indexOf(itemPrice)
 
   if (i == -1) {
-    //    itemPrice = parseInt(itemPrice)
     price.push(itemPrice)
     console.log(itemPrice)
 
-
   } else {
-    //    itemPrice = parseInt(itemPrice)
     price.splice(i, 1)
     console.log('-' + itemPrice)
   }
 
   //Display array of prices in cart
   console.log(price)
+
 }
 
-//Function to see what items are in cart
-function totalCost() {
-  //Convert total cart price strings into numbers (with decimals)
-  priceValue = parseFloat(price)
+//i = 0;
+//sum = 0;
+//for (i > 0; i++) {
+//
+//  console.log(priceValue)
+//
+//  sum = priceValue
+//}
 
-  console.log(priceValue)
 
-  //  console.log("Price of items in cart: " + priceValue + "$")
-}
-
-
-////Extra challenge #2
-////Function to see what items are in the cart
-//function calculate(itemPrice) {
-//  var i = price.indexOf(itemPrice)
-//  console.log(i)
-//  //Add or substract prices in cart
-//  if (i == -1) {
-//    //Convert price string into a number
-//    priceValue = parseInt(itemPrice)
-//    price.push(priceValue)
-//    console.log('Your total is ' + priceValue + '$.')
+i = 0;
+//Function to calculate total cost in cart
+//function totalCost() {
+//  //Convert total cart price strings into numbers (with decimals)
+//
+//
+//  console.log("Price of items in cart: " + i + "$")
+//
+//  for (i = 0; i < 10000; i++) {
+//    i = parseFloat(price)
+//    console.log(i)
 //  }
-//  //If yes, remove item
-//  else {
-//    //Remove 1 item from the index of the chosen item
-//    priceValue = parseInt(itemPrice)
-//    price.splice(i, 1)
-//    console.log(itemPrice + ' has been removed from your cart.')
-//  }
+//
 //}
