@@ -115,6 +115,14 @@ function lengthchoice() {
   console.log("You have chosen to see scarves of " + Length + " length.")
 }
 
+//function to hide left side form, when under 542px
+function toggleMenu() {
+  //Choose elements that have the class "small"
+  var element = document.getElementById("small")
+  //Hide the chosen elements
+  element.classList.toggle("hidden-under-542px")
+}
+
 //Items in shopping cart
 var cart = [
 ]
@@ -146,11 +154,11 @@ function totalCart() {
   console.log("Items in cart: " + cart)
 }
 
+//Extra challenge #2
 //Prices in shopping cart
 var price = [
 ]
 
-//Extra challenge #2
 //Function to calculate cost in cart
 function calculate(itemPrice) {
 
@@ -167,30 +175,31 @@ function calculate(itemPrice) {
 
   //Display array of prices in cart
   console.log(price)
-
 }
 
-//i = 0;
-//sum = 0;
-//for (i > 0; i++) {
-//
-//  console.log(priceValue)
-//
-//  sum = priceValue
-//}
-
-
-i = 0;
 //Function to calculate total cost in cart
-//function totalCost() {
-//  //Convert total cart price strings into numbers (with decimals)
-//
-//
-//  console.log("Price of items in cart: " + i + "$")
-//
-//  for (i = 0; i < 10000; i++) {
-//    i = parseFloat(price)
-//    console.log(i)
-//  }
-//
-//}
+function totalCost() {
+
+
+  //Convert total cart price strings into numbers (with decimals)
+  priceValue = parseFloat(price)
+
+
+
+
+  console.log("Price of items in cart: " + priceValue + "$")
+}
+
+
+
+
+
+
+
+
+
+//saleprice = [
+//  "19.99", "18.99", "2.99", "29.99", "11.99", "70.99", "49.99", "4.99"
+//]
+
+//console.log(saleprice)

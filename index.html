@@ -75,59 +75,65 @@
   <main>
 
     <!-- Left side Checkbox form: Shown ONLY when screen is wider than 542px -->
-    <aside class="leftaside">
-      <form method="GET">
+    <div>
+      <div class="hidden-under-542px" id="small">
+        <form method="GET">
 
-        <!-- First filter -->
-        <fieldset>
-          <legend>
-            Style
-          </legend>
+          <!-- First filter -->
+          <fieldset>
+            <legend>
+              Style
+            </legend>
 
-          <label>
+            <label>
             <input type="checkbox" name="type" value="twistwrap">
             Wrap
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="type" value="infinity">
             Infinity
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="type" value="twill">
             Twill
           </label>
-        </fieldset>
+          </fieldset>
 
-        <!-- Second Filter -->
-        <fieldset>
-          <legend>
-            Length
-          </legend>
+          <!-- Second Filter -->
+          <fieldset>
+            <legend>
+              Length
+            </legend>
 
-          <label>
+            <label>
             <input type="checkbox" name="length" value="short">
             Short
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="medium">
             Medium
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="long">
             Long
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="xlong">
             X-Long
           </label>
-        </fieldset>
-      </form>
-    </aside>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="hidden-over-542px">
+        <button class="leftasidebutton" onclick="toggleMenu()">Select Styles and Length Options</button>
+      </div>
+    </div>
 
 
     <section class="container">
@@ -146,30 +152,6 @@
         </label>
       </form>
 
-      <!-- Left side Checkbox form BECOMES top center dropdown forms: Shown ONLY when screen is less than 542px -->
-      <form class="typecenter" method="GET">
-        <label>Style:
-          <select id="style" onchange="stylechoice()">
-            <option value="all" selected>All</option>
-            <option value="wrap">Wrap</option>
-            <option value="infinity">Infinity</option>
-            <option value="twill">Twill</option>
-          </select>
-        </label>
-      </form>
-
-      <form class="lengthcenter" method="GET">
-        <label>Length:
-          <select id="length" onchange="lengthchoice()">
-            <option value="all" selected>All</option>
-            <option value="short">Short</option>
-            <option value="medium">Medium</option>
-            <option value="long">Long</option>
-            <option value="xlong">X-Long</option>
-          </select>
-        </label>
-      </form>
-
       <!-- Main products section -->
       <article class="products">
         <div class="first">
@@ -183,7 +165,7 @@
           <!-- Price -->
           <h4 class="strike">26.99</h4>
           <!-- Sale Price-->
-          <h4 id="newprice">19.99</h4>
+          <h4 class="newprice">19.99</h4>
           <!-- Rating and number of reviews -->
           <a href="#" class="rating">
             <i class="fas fa-star" aria-hidden="true"></i> 
