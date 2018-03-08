@@ -95,22 +95,78 @@ function sortchoice() {
   console.log("You have chosen to sort by " + Sorted + ".")
 }
 
-//Function to retrieve Style value in dropdown
-function stylechoice() {
-  event.preventDefault();
-  console.log("Form Submitted")
-
-  var Style = document.getElementById("style").value;
-
-  console.log("You have chosen to see scarves of " + Style + " style.")
+//function to hide left side form, when under 542px
+function toggleMenu() {
+  //Choose elements that have the class "small"
+  var element = document.getElementById("small")
+  //Hide the chosen elements
+  element.classList.toggle("hidden-under-542px")
 }
 
-//Function to retrieve Length in dropdown
-function lengthchoice() {
-  event.preventDefault();
-  console.log("Form Submitted")
+//Items in shopping cart
+var cart = [
+]
 
-  var Length = document.getElementById("length").value;
+//function to add and remove items in cart
+//Retrieve information from form, with argument "item"
+function updatedCart(item) {
+  //Check if value is already in the shopping cart
+  var i = cart.indexOf(item)
+  //If no, insert item
+  if (i == -1) {
+    cart.push(item)
+    console.log(item + " has been added to your cart.")
+    console.log("You have " + cart.length + " items in the cart.")
+  }
+  //If yes, remove item
+  else {
+    //Remove 1 item from the index of the chosen item
+    cart.splice(i, 1)
+    console.log(item + " has been removed from your cart.")
+    console.log("You have " + cart.length + " items in the cart.")
+  }
+}
 
-  console.log("You have chosen to see scarves of " + Length + " length.")
+//Extra challenge #1
+//function to see what items are in the cart
+function totalCart() {
+  console.log("Items in cart: " + cart)
+}
+
+//Extra challenge #2
+//Prices in shopping cart
+var price = [
+]
+
+//function to display cost in cart
+function calculate(itemPrice) {
+
+  var i = price.indexOf(itemPrice)
+
+  if (i == -1) {
+    price.push(itemPrice)
+    console.log(itemPrice + "$")
+
+  } else {
+    price.splice(i, 1)
+    console.log("-" + itemPrice + "$")
+  }
+}
+
+//Declare i as index, and sum as 0 to begin iterations
+var i = 0;
+var sum = 0;
+
+//function to calculate the total cost
+function totalCost() {
+
+  //Iterate from 0 until the number of prices added
+  for (i = 0; i < price.length; i++) {
+    //Convert all strings into numbers when they are added to cart
+    priceValue = parseFloat(price[i])
+    //Sum to find the total in cart
+    sum = sum + priceValue
+  }
+
+  console.log("Cost of items in cart: " + sum + "$")
 }
