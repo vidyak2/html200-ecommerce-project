@@ -95,26 +95,6 @@ function sortchoice() {
   console.log("You have chosen to sort by " + Sorted + ".")
 }
 
-//Function to retrieve Style value in dropdown
-function stylechoice() {
-  event.preventDefault();
-  console.log("Form Submitted")
-
-  var Style = document.getElementById("style").value;
-
-  console.log("You have chosen to see scarves of " + Style + " style.")
-}
-
-//Function to retrieve Length in dropdown
-function lengthchoice() {
-  event.preventDefault();
-  console.log("Form Submitted")
-
-  var Length = document.getElementById("length").value;
-
-  console.log("You have chosen to see scarves of " + Length + " length.")
-}
-
 //function to hide left side form, when under 542px
 function toggleMenu() {
   //Choose elements that have the class "small"
@@ -127,29 +107,28 @@ function toggleMenu() {
 var cart = [
 ]
 
-//Function will be redone for every element, except item name will change
-//Retrieve information from form, by adding directly when calling function
+//function to add and remove items in cart
+//Retrieve information from form, with argument "item"
 function updatedCart(item) {
-  //  event.preventDefault()
   //Check if value is already in the shopping cart
   var i = cart.indexOf(item)
   //If no, insert item
   if (i == -1) {
     cart.push(item)
-    console.log(item + ' has been added to your cart.')
-    console.log('You have ' + cart.length + ' items in the cart.')
+    console.log(item + " has been added to your cart.")
+    console.log("You have " + cart.length + " items in the cart.")
   }
   //If yes, remove item
   else {
     //Remove 1 item from the index of the chosen item
     cart.splice(i, 1)
-    console.log(item + ' has been removed from your cart.')
-    console.log('You have ' + cart.length + ' items in the cart.')
+    console.log(item + " has been removed from your cart.")
+    console.log("You have " + cart.length + " items in the cart.")
   }
 }
 
 //Extra challenge #1
-//Function to see what items are in the cart
+//function to see what items are in the cart
 function totalCart() {
   console.log("Items in cart: " + cart)
 }
@@ -159,22 +138,19 @@ function totalCart() {
 var price = [
 ]
 
-//Function to calculate cost in cart
+//function to display cost in cart
 function calculate(itemPrice) {
 
   var i = price.indexOf(itemPrice)
 
   if (i == -1) {
     price.push(itemPrice)
-    console.log(itemPrice)
+    console.log(itemPrice + "$")
 
   } else {
     price.splice(i, 1)
-    console.log('-' + itemPrice)
+    console.log("-" + itemPrice + "$")
   }
-
-  //Display array of prices in cart
-  console.log(price)
 }
 
 //Declare i as index, and sum as 0 to begin iterations
@@ -192,5 +168,5 @@ function totalCost() {
     sum = sum + priceValue
   }
 
-  console.log("Cost of items in cart: " + sum)
+  console.log("Cost of items in cart: " + sum + "$")
 }

@@ -252,13 +252,13 @@
 
   /* Until a max-width of 542px, left side form does not display */
 
+  /* Left side form is displayed as a button */
+
   @media screen and (max-width: 542px) {
     .hidden-under-542px {
       display: none;
     }
   }
-
-  /* Left side form is displayed as a button */
 
   @media screen and (max-width: 295px) {
     .leftasidebutton {
