@@ -51,7 +51,8 @@
         <ul>
           <li><a href="#">Sign in</a></li>
           <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Locator</a></li>
-          <li class="cart-info"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+          <!-- On click: enumerate items in cart and the total price -->
+          <li class="cart-info" onclick="totalCart(); totalCost()"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -74,59 +75,66 @@
   <main>
 
     <!-- Left side Checkbox form: Shown ONLY when screen is wider than 542px -->
-    <aside class="leftaside">
-      <form method="GET">
+    <div>
+      <div class="hidden-under-542px" id="small">
+        <form method="GET">
 
-        <!-- First filter -->
-        <fieldset>
-          <legend>
-            Style
-          </legend>
+          <!-- First filter -->
+          <fieldset>
+            <legend>
+              Style
+            </legend>
 
-          <label>
+            <label>
             <input type="checkbox" name="type" value="twistwrap">
             Wrap
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="type" value="infinity">
             Infinity
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="type" value="twill">
             Twill
           </label>
-        </fieldset>
+          </fieldset>
 
-        <!-- Second Filter -->
-        <fieldset>
-          <legend>
-            Length
-          </legend>
+          <!-- Second Filter -->
+          <fieldset>
+            <legend>
+              Length
+            </legend>
 
-          <label>
-            <input type="checkbox" name="lenght" value="short">
+            <label>
+            <input type="checkbox" name="length" value="short">
             Short
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="medium">
             Medium
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="long">
             Long
           </label>
-          <br>
-          <label>
+            <br>
+            <label>
             <input type="checkbox" name="length" value="xlong">
             X-Long
           </label>
-        </fieldset>
-      </form>
-    </aside>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- Left side Checkbox form: Becomes a toggle button ONLY when screen less than 542px -->
+      <div class="hidden-over-542px">
+        <button class="leftasidebutton" onclick="toggleMenu()">Select Styles and Length Options</button>
+      </div>
+    </div>
 
 
     <section class="container">
@@ -141,30 +149,6 @@
             <option value="increasing">Price: Low to High</option>
             <option value="decreasing">Price: High to Low</option>
             <option value="rating">Ratings</option>
-          </select>
-        </label>
-      </form>
-
-      <!-- Left side Checkbox form BECOMES top center dropdown forms: Shown ONLY when screen is less than 542px -->
-      <form class="typecenter" method="GET">
-        <label>Style:
-          <select id="style" onchange="stylechoice()">
-            <option value="all" selected>All</option>
-            <option value="wrap">Wrap</option>
-            <option value="infinity">Infinity</option>
-            <option value="twill">Twill</option>
-          </select>
-        </label>
-      </form>
-
-      <form class="lengthcenter" method="GET">
-        <label>Length:
-          <select id="length" onchange="lengthchoice()">
-            <option value="all" selected>All</option>
-            <option value="short">Short</option>
-            <option value="medium">Medium</option>
-            <option value="long">Long</option>
-            <option value="xlong">X-Long</option>
           </select>
         </label>
       </form>
@@ -192,6 +176,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (40)
           </a>
+          <!-- Add/Delete button -->
+          <button onclick="updatedCart('Reversible Plaid'); calculate('19.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -209,6 +195,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (29)
           </a>
+
+          <button onclick="updatedCart('Fringed Plaid'); calculate('18.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -227,6 +215,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (1)
           </a>
+
+          <button onclick="updatedCart('Multi Color'); calculate('2.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
 
@@ -245,6 +235,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (259)
           </a>
+
+          <button onclick="updatedCart('Northern Lights'); calculate('29.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -262,6 +254,8 @@
             <i class="fas fa-star" aria-hidden="true"></i>
             (1159)
           </a>
+
+          <button onclick="updatedCart('Ombre Infinity'); calculate('11.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="first">
@@ -279,6 +273,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (0)
           </a>
+
+          <button onclick="updatedCart('Ashby Twill'); calculate('70.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <!-- New class for the last row that only has 2 items -->
@@ -297,6 +293,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (63)
           </a>
+
+          <button onclick="updatedCart('Wool Cable Knit'); calculate('49.99')">+ <i class="fa fa-shopping-cart" aria-hidden="true"></i> - </button>
         </div>
 
         <div class="second">
@@ -315,6 +313,8 @@
             <i class="far fa-star" aria-hidden="true"></i>
             (96)
           </a>
+
+          <button onclick="updatedCart('Etro Paisley-Print Silk'); calculate('4.99')"> + / - </button>
         </div>
       </article>
 
