@@ -177,29 +177,20 @@ function calculate(itemPrice) {
   console.log(price)
 }
 
-//Function to calculate total cost in cart
+//Declare i as index, and sum as 0 to begin iterations
+var i = 0;
+var sum = 0;
+
+//function to calculate the total cost
 function totalCost() {
 
+  //Iterate from 0 until the number of prices added
+  for (i = 0; i < price.length; i++) {
+    //Convert all strings into numbers when they are added to cart
+    priceValue = parseFloat(price[i])
+    //Sum to find the total in cart
+    sum = sum + priceValue
+  }
 
-  //Convert total cart price strings into numbers (with decimals)
-  priceValue = parseFloat(price)
-
-
-
-
-  console.log("Price of items in cart: " + priceValue + "$")
+  console.log("Cost of items in cart: " + sum)
 }
-
-
-
-
-
-
-
-
-
-//saleprice = [
-//  "19.99", "18.99", "2.99", "29.99", "11.99", "70.99", "49.99", "4.99"
-//]
-
-//console.log(saleprice)
