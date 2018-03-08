@@ -162,7 +162,9 @@
 
   /* Children elements */
 
-  .leftaside {
+  /* Left side form style */
+
+  .hidden-under-542px {
     margin-top: 3.8rem;
     margin-bottom: auto;
 
@@ -173,6 +175,21 @@
     font-weight: bold;
     padding: 1rem;
   }
+
+  /* Button style (left side form) */
+
+  .leftasidebutton {
+    margin-top: 3.8rem;
+    margin-bottom: auto;
+    padding: 1rem;
+
+    font-weight: bold;
+    padding: 1rem;
+    background-color: rgba(153, 204, 255, 0.1);
+    box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.2);
+
+  }
+
 
   /*********** PRODUCTS SECTION ***********/
 
@@ -227,35 +244,43 @@
   /* Resize Left aside when on small screen by reducing padding and top margin */
 
   @media screen and (max-width: 750px) {
-    .leftaside {
+    .hidden-under-542px {
       margin-top: 4.8rem;
       padding: 1rem;
     }
   }
 
-  /* Until a max-width of 542px, the left aside does not display */
+  /* Until a max-width of 542px, left side form does not display */
+
+  /* Left side form is displayed as a button */
 
   @media screen and (max-width: 542px) {
-    .leftaside {
+    .hidden-under-542px {
       display: none;
-    }
-
-    /* Below 542px, left aside becomes dropdown menus, and aligns with Sort By */
-    .SortBy,
-    .typecenter,
-    .lengthcenter {
-      align-self: flex-start;
-      margin-left: 2rem;
     }
   }
 
-  /* Until a min-width of 542px, typecenter and lengthcenter (dropdown menus) do not display. */
+  @media screen and (max-width: 295px) {
+    .leftasidebutton {
+      margin-top: 1rem;
+      margin-bottom: auto;
+
+      padding: 0.2rem;
+    }
+  }
+
+  /* After 542px, left side button does not display, and Sort By form aligns to the center */
 
   @media screen and (min-width: 542px) {
-    .typecenter,
-    .lengthcenter {
+    .hidden-over-542px {
       display: none;
     }
+    .SortBy {
+      align-self: flex-start;
+      margin-left: 2rem;
+      padding: 1rem 0rem;
+    }
+
   }
 
   /*********** MODULES ***********/
