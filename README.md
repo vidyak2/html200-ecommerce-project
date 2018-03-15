@@ -70,3 +70,35 @@ Each weekly assignment will be graded independently. There will not be a final g
 
 ## Testing
 [update this section with information about the testing steps you took to ensure site quality]
+
+#1 Define who the user base is for this website, and what sort of devices they might use.
+
+The users of this website would be teenagers, young adults, and adults, with ages varying from 18 to 49. The majority of the users would be women. There could be men looking for presents, or for themselves, and some users could be over 50. 
+This analysis will focus on the majority of the users, estimated to be between 18 and 49 years of age. They would be students or parents with a career. 
+These users would have a high computer experience, and would mainly be using smartphones. It is estimated, according to Pew Research Center, that 66% of women own a smartphone. Between the ages of 18 and 29, 86% of the population owns a smartphone, and between the ages of 30 and 49, 83% of the population own a smartphone. 
+It is also possible that the users use a tablet or a computer. The percentage of women using these devices are, respectively, 47% and 71%.
+This website should be well tailored for all devices, and especially for smartphones and computers. 
+
+
+#2 Test your site across multiple browsers and devices, focusing on ones your market research highlighted, using the tools we learned about in today's class. 
+#3 Update the "Testing" section of the README to include your research on users and devices, and testing steps you took to ensure site quality.
+
+1. Testing has been done on http://responsivedesignchecker.com, to ensure that the website appears as wanted on all the main devices. With this tool, responsiveness of the website was verified. All elements moved as expected at various screen sizes. 
+
+2. Testing has been done on https://search.google.com/test/mobile-friendly. This test verified that the website is mobile-friendly. 
+
+3. Testing has been done on https://www.webpagetest.org, to verify load time. The grade A has been given for all tested elements, except for Cache static content (F). This last element has to be reworked before site is fully published. 
+This test was done for: 
+- iPhone 6: Load time: 1.940s, and first byte appeared after: 0.382s 
+- Galaxy S5: Load time: 1.422s, and first byte appeared after: 0.333s
+- Desktop (Toronto, Canada, Chrome, Firefox, Opera): Load time: 1.517s, and first byte appeared after: 0.310s
+- Desktop (Pheonix, AZ, IE10): Load time: 1.649s, and first byte appeared after: 0.399s
+These tests were done using various internet connexions as well.
+
+4. Testing has been done on https://tools.pingdom.com. This test was done to verify how the website would respond on real browsers. 
+The result of this test was: Performance grade: B (88%), Load time: 1.55s. 
+This test has also flagged "Leverage browser caching: F". This must be corrected. 
+
+5. Testing was done on https://developers.google.com/speed/pagespeed/insights/. The grade given for optimization on mobile is: 72%, and on desktop: 69%. 
+The images could be compressed, and some blocking CSS resources should be removed. 
+
